@@ -1,0 +1,24 @@
+:: StoryTitle {"position":"200,0"}
+Cosmic Quest
+
+:: StoryData {"position":"400,0"}
+{
+  "ifid": "86EAD13F-5D2B-425A-8795-DF0B4808C179",
+  "format": "Harlowe",
+  "format-version": "3.3.8",
+  "start": "Intro",
+  "tag-colors": {},
+  "zoom": 1
+}
+
+:: StoryStylesheet [stylesheet] {"position":"600,0"}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+tw-story {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:: Intro {"position":"0,200"}
+Let's [[begin->Bedroom]].

@@ -1,0 +1,9 @@
+:: Bathroom {"position":"600,200"}
+You go to the bathroom.
+
+It's a pretty small bathroom, only (link-show: "a sink", ?sink), a medicine cabinet, and a toilet are here.
+
+\|sink)[
+The sink is white ceramic, and the faucet is brass. The 
+]
+You do your business quickly so that you [[get out->Hallway]] without too much dilly-dallying.
