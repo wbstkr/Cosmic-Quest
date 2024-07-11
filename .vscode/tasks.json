@@ -5,7 +5,7 @@
             "label": "Tweego",
             "type": "shell",
             "isBackground": true,
-            "command": "tweego -o index.html src; ./index.html",
+            "command": "tweego -t -o out/index.html src; tweego -o index.html src; out/index.html",
             "group": {
                 "kind": "build",
                 "isDefault": true
