@@ -1,9 +1,37 @@
 :: Bathroom {"position":"600,200"}
 You go to the bathroom.
 
-It's a pretty small bathroom, only (link-show: "a sink", ?sink), a medicine cabinet, and a toilet are here.
+It's a pretty small bathroom: only a sink, a medicine cabinet, and a toilet are here.
 
-\|sink)[
-The sink is white ceramic, and the faucet is brass. The 
+\(click: "a medicine cabinet")[
+    {
+        The medicine cabinet is white painted wood, with a mirror on the front. 
+        (click: "mirror")[
+            You can see your dark circles under your dark brown eyes. Your curly black hair is due for a trim. Sometimes, you wish it were straight.
+        ]
+        Inside is a comb, your father's razor, a can shaving cream, a first-aid kit, and various creams and medication.
+    }
 ]
-You do your business quickly so that you [[get out->Hallway]] without too much dilly-dallying.
+\(click: "a sink")[
+    The sink is white ceramic, and the faucet is brass. The years of usage has speckled the brass with dark spots. Your parents think that this gives it a bit of charm. {
+        (if: not $hands_washed)[
+            It would be a good idea to (link-reveal: "wash your hands")[
+                (set: $hands_washed to true)
+                (rerun: ?leaving)
+            ].
+        ]
+    }
+]
+\|leaving>[
+    {
+        You do your business quickly 
+        (if: $hands_washed)[and wash your hands ]
+        so that you can get out without any further dilly-dallying.
+    }
+    {
+        (click: "get out")[
+            (if: $hands_washed)[(goto: "Hallway")]
+            (else:)[Erm... you forgot to wash your hands.]
+        ]
+    }
+]

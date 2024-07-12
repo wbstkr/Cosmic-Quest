@@ -17,43 +17,85 @@ tw-story {
   font-style: normal;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Bathroom" tags="" position="600,200" size="100,100">You go to the bathroom.
 
-It&#39;s a pretty small bathroom, only (link-show: &quot;a sink&quot;, ?sink), a medicine cabinet, and a toilet are here.
+It&#39;s a pretty small bathroom: only a sink, a medicine cabinet, and a toilet are here.
 
-\|sink)[
-The sink is white ceramic, and the faucet is brass. The 
+\(click: &quot;a medicine cabinet&quot;)[
+    {
+        The medicine cabinet is white painted wood, with a mirror on the front. 
+        (click: &quot;mirror&quot;)[
+            You can see your dark circles under your dark brown eyes. Your curly black hair is due for a trim. Sometimes, you wish it were straight.
+        ]
+        Inside is a comb, your father&#39;s razor, a can shaving cream, a first-aid kit, and various creams and medication.
+    }
 ]
-You do your business quickly so that you [[get out-&gt;Hallway]] without too much dilly-dallying.</tw-passagedata><tw-passagedata pid="2" name="Bedroom" tags="" position="200,200" size="100,100">It&#39;s a humid summer night and you are in your bedroom, on your bed, face down, feet up, arms hanging off the side. The air is so thick that you would be struggling to breathe if it weren&#39;t for the fan propped on (link-show: &quot;your desk&quot;, ?desk), blowing directly into your face. After several minutes of staring at the rug next to your bed, you succumb to boredom. You look at the wall between (link-show: &quot;your bookshelf&quot;, ?bookshelf) and door. There are several (link-show: &quot;Justin Bieber posters&quot;, ?posters) there.
+\(click: &quot;a sink&quot;)[
+    The sink is white ceramic, and the faucet is brass. The years of usage has speckled the brass with dark spots. Your parents think that this gives it a bit of charm. {
+        (if: not $hands_washed)[
+            It would be a good idea to (link-reveal: &quot;wash your hands&quot;)[
+                (set: $hands_washed to true)
+                (rerun: ?leaving)
+            ].
+        ]
+    }
+]
+\|leaving&gt;[
+    {
+        You do your business quickly 
+        (if: $hands_washed)[and wash your hands ]
+        so that you can get out without any further dilly-dallying.
+    }
+    {
+        (click: &quot;get out&quot;)[
+            (if: $hands_washed)[(goto: &quot;Hallway&quot;)]
+            (else:)[Erm... you forgot to wash your hands.]
+        ]
+    }
+]</tw-passagedata><tw-passagedata pid="2" name="Bedroom" tags="" position="200,200" size="100,100">It&#39;s a humid summer night and you are in your bedroom, on your bed, face down, feet up, arms hanging off the side. The air is so thick that you would be struggling to breathe if it weren&#39;t for the fan propped on your desk, blowing directly into your face. After several minutes of staring at the rug next to your bed, you succumb to boredom. You look at the wall between your bookshelf and door. There are several Justin Bieber posters there.
 
-\|posters)[
-You&#39;ve been meaning to take down these Justin Bieber posters, but you just haven&#39;t gotten around to it. You put up a bunch of posters of him sometime between 2010 and 2014 because you used to love his shit, but now it seems that he is on the path to cultural irrelevancy, so you haven&#39;t paid attention to anything he&#39;s done in a hot minute. As a matter of fact, you can&#39;t remember what made you enamoured with him in the first place.
+\(click: &quot;Justin Bieber posters&quot;)[
+    You&#39;ve been meaning to take down these Justin Bieber posters, but you just haven&#39;t gotten around to it. You put up a bunch of posters of him sometime between 2010 and 2014 because you used to love his shit, but now it seems that he is on the path to cultural irrelevancy, so you haven&#39;t paid attention to anything he&#39;s done in a hot minute. As a matter of fact, you can&#39;t remember what made you enamoured with him in the first place.
 ]
-\|bookshelf)[
-Your bookshelf is full of books you&#39;ve collected since childhood, so most of them are way below your reading level. It&#39;s been years since you&#39;ve read &quot;Winnie the Pooh and the Blustery Day&quot; and you thought that buying the &quot;Lord of the Rings&quot; trilogy would motivate you to actually read the damn series, but the task just seems too daunting. There is a pretty beat-up copy of &quot;The New Way Things Work&quot; by David Macaulay at the bottom of the bookshelf. Out of anything in the bookshelf, this is probably your top book.
+\(click: &quot;your bookshelf&quot;)[
+    Your bookshelf is full of books you&#39;ve collected since childhood, so most of them are way below your reading level. It&#39;s been years since you&#39;ve read &quot;Winnie the Pooh and the Blustery Day&quot; and you thought that buying the &quot;Lord of the Rings&quot; trilogy would motivate you to actually read the damn series, but the task just seems too daunting. There is a pretty beat-up copy of &quot;The New Way Things Work&quot; by David Macaulay at the bottom of the bookshelf. Out of anything in the bookshelf, this is probably your top book.
 ]
-\|desk)[
-Your desk is pretty bare bones, just an ordinary table really. It has an old &quot;Spanish to English&quot; dictionary on it that you are using to prop up your desk fan. There were two empty cans of orange flavoured sparkling water, but both fell onto the floor, and you know you&#39;ll get to it before you go to bed. There is also a picture book of spaceships opened to the page talking about the Apollo 11 launch on your desk. You were reading it before you decided to zone out.
+\(click: &quot;your desk&quot;)[
+    Your desk is pretty bare bones, just an ordinary table really. It has an old &quot;Spanish to English&quot; dictionary on it that you are using to prop up your desk fan. There were two empty cans of orange flavoured sparkling water, but both fell onto the floor, and you know you&#39;ll get to it before you go to bed. There is also a picture book of spaceships opened to the page talking about the Apollo 11 launch on your desk. You were reading it before you decided to zone out.
 ]
 You hear a knock on your door. It is your mother speaking:
 
 “I have dinner ready. You should come down soon.”
 
-It&#39;s probably about time you pick yourself up and [[get your ass downstairs-&gt;Hallway]].</tw-passagedata><tw-passagedata pid="3" name="Intro" tags="" position="0,200" size="100,100">Let&#39;s [[begin-&gt;Bedroom]].</tw-passagedata><tw-passagedata pid="4" name="Hallway" tags="" position="400,200" size="100,100">Off your bed you go. You make your way to the door, one lethargic step at a time.
+It&#39;s probably about time you pick yourself up and [[get your ass downstairs-&gt;Hallway]].</tw-passagedata><tw-passagedata pid="3" name="Intro" tags="" position="0,200" size="100,100">Let&#39;s [[begin-&gt;Bedroom]].
 
-\|bedroom-door)[
-The door has a rack of “over the door” hooks. Each of the 8 hooks is occupied by a t-shirt, a sweater, a pair of jeans, or whatever. Hidden behind the curtains of clothing is a plastic dart board. You made your parents buy it for you when you were eleven because you saw it on TV, but you lost all the suction-cup darts within a month. The only reason you haven&#39;t taken it down is that when there are no clothes on the door-hooks, you really like how it breaks up the plainness of your door.
-]
-With a twist and a pull, you are greeted by the hallway of the second floor of your home.
+(set: $hands_washed to false)
 
-Your bedroom is at the end of the hall. Across from your room is (link-show: &quot;the bathroom&quot;, ?bathroom). To the left of that are the stairs that lead to the first floor, followed by a railing. Beyond the railing is (link-show: &quot;a closet&quot;, ?closet). Next to your bedroom, is (link-show: &quot;your parents&#39; room&quot;, ?parents-room).
+&lt;!-- 
+  Story outline, in case I forget:
+    - mc finds letter on their desk in between pages of the book they are reading (it wasn&#39;t there before)
+    - letter is talking about how earth is in danger, so mc has to go some place to come into contact with some aliens
+    - aliens explain how they came to earth long ago and did a bunch of stuff and how some people actually have some alien heritage (very faint)
+    - thats why aliens care enough to warn earth about the doom, but really only care enough to send one letter (they didnt realize that humans were already past letters)
+    - idk mc tries to figure out a way to get past the end of the world
+ --&gt;</tw-passagedata><tw-passagedata pid="4" name="Hallway" tags="" position="400,200" size="100,100">(if: (history:)&#39;s last is &quot;Bedroom&quot;)[\
+    Off your bed you go. You make your way to the door, one lethargic step at a time.
+    (click: &quot;the door&quot;)[
+        The door has a rack of “over the door” hooks. Each of the 8 hooks is occupied by a t-shirt, a sweater, a pair of jeans, or whatever. Hidden behind the curtains of clothing is a plastic dart board. You made your parents buy it for you when you were eleven because you saw it on TV, but you lost all the suction-cup darts within a month. The only reason you haven&#39;t taken it down is that when there are no clothes on the door-hooks, you really like how it breaks up the plainness of your door.
+    ]
+    With a twist and a pull, you are greeted by the hallway of the second floor of your home.
 
-\|bathroom)[
-You haven&#39;t used the bathroom since lunchtime. Right now wouldn&#39;t be a bad time to [[go number two-&gt;Bathroom]].
+]\
+Your bedroom is at the end of the hall. Across from your room is the bathroom. To the left of that are the stairs that lead to the first floor, followed by a railing. Beyond the railing is a closet. Next to your bedroom, is your parents&#39; room.
+
+\(if: (history:)&#39;s last is not &quot;Bathroom&quot;)[\
+    (click: &quot;the bathroom&quot;)[
+        You haven&#39;t used the bathroom since lunchtime. Right now wouldn&#39;t be a bad time to [[go number two-&gt;Bathroom]].
+    ]\
 ]
-\|parents-room)[
-The door to your parents&#39; room has a “Live Laugh Love” plaque hanging from a string nailed in place. Your father hung it up ironically, but you really never can tell when it comes to your parents. You can hear your father snoring behind the door. You think it&#39;s best to not pester him.
+\(click: &quot;your parents&#39; room&quot;)[
+    The door to your parents&#39; room has a “Live Laugh Love” plaque hanging from a string nailed in place. Your father hung it up ironically, but you really never can tell when it comes to your parents. You can hear your father snoring behind the door. You think it&#39;s best to not pester him.
 ]
-\|closet)[
-The closet is full of old junk, like obsolete electronics your father can&#39;t get himself to throw away and antique shoes your mother swears will be worth thousands in the future. The tech is ancient, and the shoes are so damn ugly. You simply can&#39;t understand why they go through the hassle. Besides this junk, there are a few cans and pots that didn&#39;t fit in the pantry downstairs, along with a damaged drone you bought last year and promptly flew into a tree.
+\(click: &quot;a closet&quot;)[
+    The closet is full of old junk, like obsolete electronics your father can&#39;t get himself to throw away and antique shoes your mother swears will be worth thousands in the future. The tech is ancient, and the shoes are so damn ugly. You simply can&#39;t understand why they go through the hassle. Besides this junk, there are a few cans and pots that didn&#39;t fit in the pantry downstairs, along with a damaged drone you bought last year and promptly flew into a tree.
 ]
 You can hear your mother setting up the dining table [[downstairs-&gt;Stairway]].</tw-passagedata><tw-passagedata pid="5" name="Stairway" tags="" position="400,400" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";

@@ -1,20 +1,23 @@
 :: Hallway {"position":"400,200"}
-Off your bed you go. You make your way to the door, one lethargic step at a time.
+(if: (history:)'s last is "Bedroom")[\
+    Off your bed you go. You make your way to the door, one lethargic step at a time.
+    (click: "the door")[
+        The door has a rack of “over the door” hooks. Each of the 8 hooks is occupied by a t-shirt, a sweater, a pair of jeans, or whatever. Hidden behind the curtains of clothing is a plastic dart board. You made your parents buy it for you when you were eleven because you saw it on TV, but you lost all the suction-cup darts within a month. The only reason you haven't taken it down is that when there are no clothes on the door-hooks, you really like how it breaks up the plainness of your door.
+    ]
+    With a twist and a pull, you are greeted by the hallway of the second floor of your home.
 
-\|bedroom-door)[
-The door has a rack of “over the door” hooks. Each of the 8 hooks is occupied by a t-shirt, a sweater, a pair of jeans, or whatever. Hidden behind the curtains of clothing is a plastic dart board. You made your parents buy it for you when you were eleven because you saw it on TV, but you lost all the suction-cup darts within a month. The only reason you haven't taken it down is that when there are no clothes on the door-hooks, you really like how it breaks up the plainness of your door.
-]
-With a twist and a pull, you are greeted by the hallway of the second floor of your home.
+]\
+Your bedroom is at the end of the hall. Across from your room is the bathroom. To the left of that are the stairs that lead to the first floor, followed by a railing. Beyond the railing is a closet. Next to your bedroom, is your parents' room.
 
-Your bedroom is at the end of the hall. Across from your room is (link-show: "the bathroom", ?bathroom). To the left of that are the stairs that lead to the first floor, followed by a railing. Beyond the railing is (link-show: "a closet", ?closet). Next to your bedroom, is (link-show: "your parents' room", ?parents-room).
-
-\|bathroom)[
-You haven't used the bathroom since lunchtime. Right now wouldn't be a bad time to [[go number two->Bathroom]].
+\(if: (history:)'s last is not "Bathroom")[\
+    (click: "the bathroom")[
+        You haven't used the bathroom since lunchtime. Right now wouldn't be a bad time to [[go number two->Bathroom]].
+    ]\
 ]
-\|parents-room)[
-The door to your parents' room has a “Live Laugh Love” plaque hanging from a string nailed in place. Your father hung it up ironically, but you really never can tell when it comes to your parents. You can hear your father snoring behind the door. You think it's best to not pester him.
+\(click: "your parents' room")[
+    The door to your parents' room has a “Live Laugh Love” plaque hanging from a string nailed in place. Your father hung it up ironically, but you really never can tell when it comes to your parents. You can hear your father snoring behind the door. You think it's best to not pester him.
 ]
-\|closet)[
-The closet is full of old junk, like obsolete electronics your father can't get himself to throw away and antique shoes your mother swears will be worth thousands in the future. The tech is ancient, and the shoes are so damn ugly. You simply can't understand why they go through the hassle. Besides this junk, there are a few cans and pots that didn't fit in the pantry downstairs, along with a damaged drone you bought last year and promptly flew into a tree.
+\(click: "a closet")[
+    The closet is full of old junk, like obsolete electronics your father can't get himself to throw away and antique shoes your mother swears will be worth thousands in the future. The tech is ancient, and the shoes are so damn ugly. You simply can't understand why they go through the hassle. Besides this junk, there are a few cans and pots that didn't fit in the pantry downstairs, along with a damaged drone you bought last year and promptly flew into a tree.
 ]
 You can hear your mother setting up the dining table [[downstairs->Stairway]].

@@ -22,3 +22,14 @@ tw-story {
 
 :: Intro {"position":"0,200"}
 Let's [[begin->Bedroom]].
+
+(set: $hands_washed to false)
+
+<!-- 
+  Story outline, in case I forget:
+    - mc finds letter on their desk in between pages of the book they are reading (it wasn't there before)
+    - letter is talking about how earth is in danger, so mc has to go some place to come into contact with some aliens
+    - aliens explain how they came to earth long ago and did a bunch of stuff and how some people actually have some alien heritage (very faint)
+    - thats why aliens care enough to warn earth about the doom, but really only care enough to send one letter (they didnt realize that humans were already past letters)
+    - idk mc tries to figure out a way to get past the end of the world
+ -->
