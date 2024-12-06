@@ -50,10 +50,11 @@ tw-passagedata:before
 
 <h1>Cosmic Quest
 </h1>
-<!-- UUID://86EAD13F-5D2B-425A-8795-DF0B4808C179// --><tw-storydata name="Cosmic Quest" startnode="4" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="86EAD13F-5D2B-425A-8795-DF0B4808C179" zoom="1" format="Paperthin" format-version="1.0.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+<!-- UUID://86EAD13F-5D2B-425A-8795-DF0B4808C179// --><tw-storydata name="Cosmic Quest" startnode="4" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="86EAD13F-5D2B-425A-8795-DF0B4808C179" zoom="1" format="Paperthin" format-version="1.0.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 tw-story {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Bathroom" tags="" position="600,200" size="100,100">You go to the bathroom.
@@ -65,7 +66,7 @@ It&#39;s a pretty small bathroom: only a sink, a medicine cabinet, and a toilet 
     The medicine cabinet is white painted wood, with a mirror on the front. Inside is a comb, your father&#39;s razor, a can shaving cream, a first-aid kit, and various creams and medication.
     \($fout: &#39;mirror&#39;, &#39;
         Mirror:
-        You can see your dark circles under your dark brown eyes. Your curly black hair is due for a trim. Sometimes, you wish it were straight.
+        Ignoring your Monster Energy Drink induced dark circles, you notice that your curly black hair is due for a trim. Sometimes, you wish it were straight.
         &#39;)&quot;)
 \($fout: &quot;a sink&quot;, &quot;
     Sink:
@@ -110,11 +111,10 @@ It&#39;s probably about time you pick yourself up and [[get your ass downstairs-
 ---
 |flavor_text&gt;[]</tw-passagedata><tw-passagedata pid="4" name="Intro" tags="" position="0,200" size="100,100">Let&#39;s [[begin-&gt;Bedroom]].
 \
-\(set: $fout to
-  (macro: string-type _link_string, string-type _description, [(output:)[\
-    (click: _link_string)[\
-      (append: ?flavor_text)[_description]]]]))
-\(set: $hands_washed to false)
+\(set: $fout to (macro: string-type _link_string, string-type _description, [(output:)[\
+  (click: _link_string)[\
+    (append: ?flavor_text)[_description]]]]))
+\(set: $hands_washed to false)\
 &lt;!-- 
   Story outline, in case I forget:
     - mc finds letter on their desk in between pages of the book they are reading (it wasn&#39;t there before)
@@ -149,7 +149,9 @@ Your bedroom is at the end of the hall. Across from your room is the bathroom. T
     The closet is full of old junk, like obsolete electronics your father can&#39;t get himself to throw away and antique shoes your mother swears will be worth thousands in the future. The tech is ancient, and the shoes are so damn ugly. You simply can&#39;t understand why they go through the hassle. Besides this junk, there are a few cans and pots that didn&#39;t fit in the pantry downstairs, along with a damaged drone you bought last year and promptly flew into a tree.
     &quot;)
 
-You can hear your mother setting up the dining table [[downstairs-&gt;Stairway]].</tw-passagedata><tw-passagedata pid="7" name="Stairway" tags="" position="400,400" size="100,100">You&#39;ve kept your mother waiting long enough.</tw-passagedata></tw-storydata>
+You can hear your mother setting up the dining table [[downstairs-&gt;Stairway]].</tw-passagedata><tw-passagedata pid="7" name="Stairway" tags="" position="400,400" size="100,100">You&#39;ve kept your mother waiting long enough.
+
+You begin making your way down the stairs. The creaky-ass steps</tw-passagedata></tw-storydata>
 
 
 </body>

@@ -8,7 +8,7 @@ It's a pretty small bathroom: only a sink, a medicine cabinet, and a toilet are 
     The medicine cabinet is white painted wood, with a mirror on the front. Inside is a comb, your father's razor, a can shaving cream, a first-aid kit, and various creams and medication.
     \($fout: 'mirror', '
         Mirror:
-        You can see your dark circles under your dark brown eyes. Your curly black hair is due for a trim. Sometimes, you wish it were straight.
+        Ignoring your Monster Energy Drink induced dark circles, you notice that your curly black hair is due for a trim. Sometimes, you wish it were straight.
         ')")
 \($fout: "a sink", "
     Sink:

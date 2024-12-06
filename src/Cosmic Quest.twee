@@ -12,10 +12,11 @@ Cosmic Quest
 }
 
 :: StoryStylesheet [stylesheet] {"position":"600,0"}
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 tw-story {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
@@ -28,11 +29,10 @@ tw-story {
 :: Intro {"position":"0,200"}
 Let's [[begin->Bedroom]].
 \
-\(set: $fout to
-  (macro: string-type _link_string, string-type _description, [(output:)[\
-    (click: _link_string)[\
-      (append: ?flavor_text)[_description]]]]))
-\(set: $hands_washed to false)
+\(set: $fout to (macro: string-type _link_string, string-type _description, [(output:)[\
+  (click: _link_string)[\
+    (append: ?flavor_text)[_description]]]]))
+\(set: $hands_washed to false)\
 <!-- 
   Story outline, in case I forget:
     - mc finds letter on their desk in between pages of the book they are reading (it wasn't there before)
