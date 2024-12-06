@@ -20,11 +20,19 @@ tw-story {
   font-style: normal;
 }
 
+:: Footer [footer] {"position":"800,0"}
+<br>
+---
+|flavor_text>[]
+
 :: Intro {"position":"0,200"}
 Let's [[begin->Bedroom]].
-
-(set: $hands_washed to false)
-
+\
+\(set: $fout to
+  (macro: string-type _link_string, string-type _description, [(output:)[\
+    (click: _link_string)[\
+      (append: ?flavor_text)[_description]]]]))
+\(set: $hands_washed to false)
 <!-- 
   Story outline, in case I forget:
     - mc finds letter on their desk in between pages of the book they are reading (it wasn't there before)

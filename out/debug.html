@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Cosmic Quest.</tw-noscript></noscript></tw-story>
-<!-- UUID://86EAD13F-5D2B-425A-8795-DF0B4808C179// --><tw-storydata name="Cosmic Quest" startnode="3" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="86EAD13F-5D2B-425A-8795-DF0B4808C179" zoom="1" format="Harlowe" format-version="3.3.8" options="debug" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+<!-- UUID://86EAD13F-5D2B-425A-8795-DF0B4808C179// --><tw-storydata name="Cosmic Quest" startnode="4" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="86EAD13F-5D2B-425A-8795-DF0B4808C179" zoom="1" format="Harlowe" format-version="3.3.8" options="debug" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 tw-story {
   font-family: "Roboto", sans-serif;
@@ -18,57 +18,62 @@ tw-story {
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Bathroom" tags="" position="600,200" size="100,100">You go to the bathroom.
 
 It&#39;s a pretty small bathroom: only a sink, a medicine cabinet, and a toilet are here.
-
-\(click: &quot;a medicine cabinet&quot;)[
-    {
-        The medicine cabinet is white painted wood, with a mirror on the front. 
-        (click: &quot;mirror&quot;)[
-            You can see your dark circles under your dark brown eyes. Your curly black hair is due for a trim. Sometimes, you wish it were straight.
-        ]
-        Inside is a comb, your father&#39;s razor, a can shaving cream, a first-aid kit, and various creams and medication.
-    }
-]
-\(click: &quot;a sink&quot;)[
+\
+\($fout: &quot;a medicine cabinet&quot;, &quot;
+    Medicine Cabinet:
+    The medicine cabinet is white painted wood, with a mirror on the front. Inside is a comb, your father&#39;s razor, a can shaving cream, a first-aid kit, and various creams and medication.
+    \($fout: &#39;mirror&#39;, &#39;
+        Mirror:
+        You can see your dark circles under your dark brown eyes. Your curly black hair is due for a trim. Sometimes, you wish it were straight.
+        &#39;)&quot;)
+\($fout: &quot;a sink&quot;, &quot;
+    Sink:
     The sink is white ceramic, and the faucet is brass. The years of usage has speckled the brass with dark spots. Your parents think that this gives it a bit of charm. {
         (if: not $hands_washed)[
-            It would be a good idea to (link-reveal: &quot;wash your hands&quot;)[
+            It would be a good idea to (link-reveal: &#39;wash your hands&#39;)[
                 (set: $hands_washed to true)
                 (rerun: ?leaving)
             ].
         ]
     }
-]
+    &quot;)
+
 \|leaving&gt;[
     {
         You do your business quickly 
         (if: $hands_washed)[and wash your hands ]
         so that you can get out without any further dilly-dallying.
-    }
-    {
-        (click: &quot;get out&quot;)[
+    } (click: &quot;get out&quot;)[{
             (if: $hands_washed)[(goto: &quot;Hallway&quot;)]
             (else:)[Erm... you forgot to wash your hands.]
-        ]
-    }
-]</tw-passagedata><tw-passagedata pid="2" name="Bedroom" tags="" position="200,200" size="100,100">It&#39;s a humid summer night and you are in your bedroom, on your bed, face down, feet up, arms hanging off the side. The air is so thick that you would be struggling to breathe if it weren&#39;t for the fan propped on your desk, blowing directly into your face. After several minutes of staring at the rug next to your bed, you succumb to boredom. You look at the wall between your bookshelf and door. There are several Justin Bieber posters there.
-
-\(click: &quot;Justin Bieber posters&quot;)[
+        }]]</tw-passagedata><tw-passagedata pid="2" name="Bedroom" tags="" position="200,200" size="100,100">It&#39;s a humid summer night and you are in your bedroom, on your bed, face down, feet up, arms hanging off the side. The air is so thick that you would be struggling to breathe if it weren&#39;t for the fan propped on your desk, blowing directly into your face. After several minutes of staring at the rug next to your bed, you succumb to boredom. You look at the wall between your bookshelf and door. There are several Justin Bieber posters there.
+\
+\($fout: &quot;Justin Bieber posters&quot;, &quot;
+    Justin Bieber posters:
     You&#39;ve been meaning to take down these Justin Bieber posters, but you just haven&#39;t gotten around to it. You put up a bunch of posters of him sometime between 2010 and 2014 because you used to love his shit, but now it seems that he is on the path to cultural irrelevancy, so you haven&#39;t paid attention to anything he&#39;s done in a hot minute. As a matter of fact, you can&#39;t remember what made you enamoured with him in the first place.
-]
-\(click: &quot;your bookshelf&quot;)[
-    Your bookshelf is full of books you&#39;ve collected since childhood, so most of them are way below your reading level. It&#39;s been years since you&#39;ve read &quot;Winnie the Pooh and the Blustery Day&quot; and you thought that buying the &quot;Lord of the Rings&quot; trilogy would motivate you to actually read the damn series, but the task just seems too daunting. There is a pretty beat-up copy of &quot;The New Way Things Work&quot; by David Macaulay at the bottom of the bookshelf. Out of anything in the bookshelf, this is probably your top book.
-]
-\(click: &quot;your desk&quot;)[
-    Your desk is pretty bare bones, just an ordinary table really. It has an old &quot;Spanish to English&quot; dictionary on it that you are using to prop up your desk fan. There were two empty cans of orange flavoured sparkling water, but both fell onto the floor, and you know you&#39;ll get to it before you go to bed. There is also a picture book of spaceships opened to the page talking about the Apollo 11 launch on your desk. You were reading it before you decided to zone out.
-]
+    &quot;)
+\($fout: &quot;your bookshelf&quot;, &quot;
+    Bookshelf:
+    Your bookshelf is full of books you&#39;ve collected since childhood, so most of them are way below your reading level. It&#39;s been years since you&#39;ve read \&quot;Winnie the Pooh and the Blustery Day\&quot; and you thought that buying the \&quot;Lord of the Rings\&quot; trilogy would motivate you to actually read the damn series, but the task just seems too daunting. There is a pretty beat-up copy of \&quot;The New Way Things Work\&quot; by David Macaulay at the bottom of th e bookshelf. Out of anything in the bookshelf, this is probably your top book.
+    &quot;)
+\($fout: &quot;your desk&quot;, &quot;
+    Your Desk:
+    Your desk is pretty bare bones, just an ordinary table really. It has an old \&quot;Spanish to English\&quot; dictionary on it that you are using to prop up your desk fan. There were two empty cans of orange flavoured sparkling water, but both fell onto the floor, and you know you&#39;ll get to it before you go to bed. There is also a picture book of spaceships opened to the page talking about the Apollo 11 launch on your desk. You were reading it before you decided to zone out.
+    &quot;)
+
 You hear a knock on your door. It is your mother speaking:
 
 “I have dinner ready. You should come down soon.”
 
-It&#39;s probably about time you pick yourself up and [[get your ass downstairs-&gt;Hallway]].</tw-passagedata><tw-passagedata pid="3" name="Intro" tags="" position="0,200" size="100,100">Let&#39;s [[begin-&gt;Bedroom]].
-
-(set: $hands_washed to false)
-
+It&#39;s probably about time you pick yourself up and [[get your ass downstairs-&gt;Doorway]].</tw-passagedata><tw-passagedata pid="3" name="Footer" tags="footer" position="800,0" size="100,100">&lt;br&gt;
+---
+|flavor_text&gt;[]</tw-passagedata><tw-passagedata pid="4" name="Intro" tags="" position="0,200" size="100,100">Let&#39;s [[begin-&gt;Bedroom]].
+\
+\(set: $fout to
+  (macro: string-type _link_string, string-type _description, [(output:)[\
+    (click: _link_string)[\
+      (append: ?flavor_text)[_description]]]]))
+\(set: $hands_washed to false)
 &lt;!-- 
   Story outline, in case I forget:
     - mc finds letter on their desk in between pages of the book they are reading (it wasn&#39;t there before)
@@ -76,28 +81,34 @@ It&#39;s probably about time you pick yourself up and [[get your ass downstairs-
     - aliens explain how they came to earth long ago and did a bunch of stuff and how some people actually have some alien heritage (very faint)
     - thats why aliens care enough to warn earth about the doom, but really only care enough to send one letter (they didnt realize that humans were already past letters)
     - idk mc tries to figure out a way to get past the end of the world
- --&gt;</tw-passagedata><tw-passagedata pid="4" name="Hallway" tags="" position="400,200" size="100,100">(if: (history:)&#39;s last is &quot;Bedroom&quot;)[\
-    Off your bed you go. You make your way to the door, one lethargic step at a time.
-    (click: &quot;the door&quot;)[
-        The door has a rack of “over the door” hooks. Each of the 8 hooks is occupied by a t-shirt, a sweater, a pair of jeans, or whatever. Hidden behind the curtains of clothing is a plastic dart board. You made your parents buy it for you when you were eleven because you saw it on TV, but you lost all the suction-cup darts within a month. The only reason you haven&#39;t taken it down is that when there are no clothes on the door-hooks, you really like how it breaks up the plainness of your door.
-    ]
-    With a twist and a pull, you are greeted by the hallway of the second floor of your home.
+ --&gt;</tw-passagedata><tw-passagedata pid="5" name="Doorway" tags="" position="200,400" size="100,100">Off your bed you go. You make your way to the door, one lethargic step at a time.
+\
+\($fout: &quot;the door&quot;, &quot;
+    Door:
+    The door has a rack of “over the door” hooks. Each of the 8 hooks is occupied by a t-shirt, a sweater, a pair of jeans, or whatever. Hidden behind the curtains of clothing is a plastic dart board. You made your parents buy it for you when you were eleven because you saw it on TV, but you lost all the suction-cup darts within a month. The only reason you haven&#39;t taken it down is that when there are no clothes on the door-hooks, you really like how it breaks up the plainness of your door.
+    
+    With a twist and a pull, you are greeted by [[the hallway-&gt;Hallway]] of the second floor of your home.
+    &quot;)</tw-passagedata><tw-passagedata pid="6" name="Hallway" tags="" position="400,200" size="100,100">You are standing in the second floor hallway.
 
-]\
 Your bedroom is at the end of the hall. Across from your room is the bathroom. To the left of that are the stairs that lead to the first floor, followed by a railing. Beyond the railing is a closet. Next to your bedroom, is your parents&#39; room.
-
-\(if: (history:)&#39;s last is not &quot;Bathroom&quot;)[\
-    (click: &quot;the bathroom&quot;)[
-        You haven&#39;t used the bathroom since lunchtime. Right now wouldn&#39;t be a bad time to [[go number two-&gt;Bathroom]].
-    ]\
-]
-\(click: &quot;your parents&#39; room&quot;)[
+\
+\($fout: &quot;the bathroom&quot;, &quot;
+    Bathroom:
+    {
+        (if: (history:)&#39;s last is not &#39;Bathroom&#39;)[You haven&#39;t used the bathroom since lunchtime. Right now wouldn&#39;t be a bad time to [[go number two-&gt;Bathroom]].]
+        (else:)[You&#39;ve already used the bathroom.]
+    }
+    &quot;)
+\($fout: &quot;your parents&#39; room&quot;, &quot;
+    Parent&#39;s Room:
     The door to your parents&#39; room has a “Live Laugh Love” plaque hanging from a string nailed in place. Your father hung it up ironically, but you really never can tell when it comes to your parents. You can hear your father snoring behind the door. You think it&#39;s best to not pester him.
-]
-\(click: &quot;a closet&quot;)[
+    &quot;)
+\($fout: &quot;a closet&quot;, &quot;
+    Closet:
     The closet is full of old junk, like obsolete electronics your father can&#39;t get himself to throw away and antique shoes your mother swears will be worth thousands in the future. The tech is ancient, and the shoes are so damn ugly. You simply can&#39;t understand why they go through the hassle. Besides this junk, there are a few cans and pots that didn&#39;t fit in the pantry downstairs, along with a damaged drone you bought last year and promptly flew into a tree.
-]
-You can hear your mother setting up the dining table [[downstairs-&gt;Stairway]].</tw-passagedata><tw-passagedata pid="5" name="Stairway" tags="" position="400,400" size="100,100"></tw-passagedata></tw-storydata>
+    &quot;)
+
+You can hear your mother setting up the dining table [[downstairs-&gt;Stairway]].</tw-passagedata><tw-passagedata pid="7" name="Stairway" tags="" position="400,400" size="100,100">You&#39;ve kept your mother waiting long enough.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

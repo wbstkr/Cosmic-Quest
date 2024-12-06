@@ -1,17 +1,21 @@
 :: Bedroom {"position":"200,200"}
 It's a humid summer night and you are in your bedroom, on your bed, face down, feet up, arms hanging off the side. The air is so thick that you would be struggling to breathe if it weren't for the fan propped on your desk, blowing directly into your face. After several minutes of staring at the rug next to your bed, you succumb to boredom. You look at the wall between your bookshelf and door. There are several Justin Bieber posters there.
-
-\(click: "Justin Bieber posters")[
+\
+\($fout: "Justin Bieber posters", "
+    Justin Bieber posters:
     You've been meaning to take down these Justin Bieber posters, but you just haven't gotten around to it. You put up a bunch of posters of him sometime between 2010 and 2014 because you used to love his shit, but now it seems that he is on the path to cultural irrelevancy, so you haven't paid attention to anything he's done in a hot minute. As a matter of fact, you can't remember what made you enamoured with him in the first place.
-]
-\(click: "your bookshelf")[
-    Your bookshelf is full of books you've collected since childhood, so most of them are way below your reading level. It's been years since you've read "Winnie the Pooh and the Blustery Day" and you thought that buying the "Lord of the Rings" trilogy would motivate you to actually read the damn series, but the task just seems too daunting. There is a pretty beat-up copy of "The New Way Things Work" by David Macaulay at the bottom of the bookshelf. Out of anything in the bookshelf, this is probably your top book.
-]
-\(click: "your desk")[
-    Your desk is pretty bare bones, just an ordinary table really. It has an old "Spanish to English" dictionary on it that you are using to prop up your desk fan. There were two empty cans of orange flavoured sparkling water, but both fell onto the floor, and you know you'll get to it before you go to bed. There is also a picture book of spaceships opened to the page talking about the Apollo 11 launch on your desk. You were reading it before you decided to zone out.
-]
+    ")
+\($fout: "your bookshelf", "
+    Bookshelf:
+    Your bookshelf is full of books you've collected since childhood, so most of them are way below your reading level. It's been years since you've read \"Winnie the Pooh and the Blustery Day\" and you thought that buying the \"Lord of the Rings\" trilogy would motivate you to actually read the damn series, but the task just seems too daunting. There is a pretty beat-up copy of \"The New Way Things Work\" by David Macaulay at the bottom of th e bookshelf. Out of anything in the bookshelf, this is probably your top book.
+    ")
+\($fout: "your desk", "
+    Your Desk:
+    Your desk is pretty bare bones, just an ordinary table really. It has an old \"Spanish to English\" dictionary on it that you are using to prop up your desk fan. There were two empty cans of orange flavoured sparkling water, but both fell onto the floor, and you know you'll get to it before you go to bed. There is also a picture book of spaceships opened to the page talking about the Apollo 11 launch on your desk. You were reading it before you decided to zone out.
+    ")
+
 You hear a knock on your door. It is your mother speaking:
 
 “I have dinner ready. You should come down soon.”
 
-It's probably about time you pick yourself up and [[get your ass downstairs->Hallway]].
+It's probably about time you pick yourself up and [[get your ass downstairs->Doorway]].

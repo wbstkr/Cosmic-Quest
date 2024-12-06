@@ -1,0 +1,9 @@
+:: Doorway {"position":"200,400"}
+Off your bed you go. You make your way to the door, one lethargic step at a time.
+\
+\($fout: "the door", "
+    Door:
+    The door has a rack of “over the door” hooks. Each of the 8 hooks is occupied by a t-shirt, a sweater, a pair of jeans, or whatever. Hidden behind the curtains of clothing is a plastic dart board. You made your parents buy it for you when you were eleven because you saw it on TV, but you lost all the suction-cup darts within a month. The only reason you haven't taken it down is that when there are no clothes on the door-hooks, you really like how it breaks up the plainness of your door.
+    
+    With a twist and a pull, you are greeted by [[the hallway->Hallway]] of the second floor of your home.
+    ")
